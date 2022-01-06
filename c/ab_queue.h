@@ -8,7 +8,7 @@
 #ifndef AB_QUEUE_H_
 #define AB_QUEUE_H_
 
-#ifdef __cplusplus__
+#ifdef __cplusplus
 extern "C" {
 #endif
 
@@ -29,7 +29,7 @@ extern void   **ab_queue_to_array(T queue, void *end);
 
 #undef T
 
-#ifdef __cplusplus__
+#ifdef __cplusplus
 }
 #endif
 

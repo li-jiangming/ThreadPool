@@ -8,7 +8,7 @@
 #ifndef AB_LIST_NODE_H_
 #define AB_LIST_NODE_H_
 
-#ifdef __cplusplus__
+#ifdef __cplusplus
 extern "C" {
 #endif
 
@@ -22,9 +22,8 @@ struct T {
 
 #undef T
 
-#ifdef __cplusplus__
+#ifdef __cplusplus
 }
 #endif
 
 #endif /* AB_LIST_NODE_H_ */
-

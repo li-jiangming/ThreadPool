@@ -1,10 +1,10 @@
 #ifndef THREAD_POOL_H_
 #define THREAD_POOL_H_
 
-#ifdef __cplusplus__
+#ifdef __cplusplus
 extern "C" {
 #endif
-   
+
 #define T ab_thread_pool_t
 typedef struct T *T;
 
@@ -15,7 +15,7 @@ extern void ab_thread_pool_add_task(T tp, void func(void *), void *data);
 
 #undef T
 
-#ifdef __cplusplus__
+#ifdef __cplusplus
 }
 #endif
 

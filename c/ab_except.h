@@ -8,7 +8,7 @@
 #ifndef AB_EXCEPT_H_
 #define AB_EXCEPT_H_
 
-#ifdef __cplusplus__
+#ifdef __cplusplus
 extern "C" {
 #endif
 
@@ -113,7 +113,7 @@ extern void except_pop();
 
 #undef T
 
-#ifdef __cplusplus__
+#ifdef __cplusplus
 }
 #endif
 

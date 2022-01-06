@@ -22,7 +22,7 @@ extern void assert(int e);
 #define assert(e) ((void)((e) || (RAISE(assert_failed), 0)))
 #endif
 
-#ifdef __cplusplus__
+#ifdef __cplusplus
 }
 #endif
 

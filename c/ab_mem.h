@@ -8,7 +8,7 @@
 #ifndef AB_MEM_H_
 #define AB_MEM_H_
 
-#ifdef __cplusplus__
+#ifdef __cplusplus
 extern "C" {
 #endif
 
@@ -31,7 +31,7 @@ extern void *mem_resize(void *ptr, long nbytes, const char *file, int line);
 #define RESIZE(ptr, nbytes) ((ptr) == mem_resize((ptr), \
         (nbytes), __FILE__, __LINE__))
 
-#ifdef __cplusplus__
+#ifdef __cplusplus
 }
 #endif
 
