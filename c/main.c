@@ -6,7 +6,7 @@
  */
 
 #include "ab_assert.h"
-#include "ab_thread_pool.h"
+#include "ab_threadpool.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -26,15 +26,16 @@ int main(int argc, char *argv[]) {
     int num5 = 5;
 
     printf("threadpool**********************\n");
-    ab_thread_pool_t tp = ab_thread_pool_new(10);
-
-    ab_thread_pool_add_task(tp, task_func, &num1);
-    ab_thread_pool_add_task(tp, task_func, &num2);
-    ab_thread_pool_add_task(tp, task_func, &num3);
-    ab_thread_pool_add_task(tp, task_func, &num4);
-    ab_thread_pool_add_task(tp, task_func, &num5);
-
-    ab_thread_pool_free(&tp);
+    ab_threadpool_t tp = ab_threadpool_new();
+    ab_threadpool_set_nums(tp, 10);
+    ab_threadpool_start(tp);
+    ab_threadpool_add_task(tp, task_func, &num1);
+    ab_threadpool_add_task(tp, task_func, &num2);
+    ab_threadpool_add_task(tp, task_func, &num3);
+    ab_threadpool_add_task(tp, task_func, &num4);
+    ab_threadpool_add_task(tp, task_func, &num5);
+    ab_threadpool_stop(tp);
+    ab_threadpool_free(&tp);
 
     return EXIT_SUCCESS;
 }

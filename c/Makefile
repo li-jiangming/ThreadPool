@@ -3,7 +3,7 @@
 CC=gcc
 CXX=g++
 
-TARGET=demo
+TARGET=main
 
 CFLAGS=-I.
 CXXFLAGS=-I.
@@ -15,7 +15,7 @@ OBJ=$(patsubst %.c,%.o,$(patsubst %.cpp,%.o,$(SRC)))
 all:$(TARGET)
 
 $(TARGET):$(OBJ)
-	$(CXX) -o $@ $^ $(LDFLAGS)
+	$(CC) -o $@ $^ $(LDFLAGS)
 
 %.o:%.c
 	$(CC) -c $< -o $@ $(CFLAGS)
